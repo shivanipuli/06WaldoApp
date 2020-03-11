@@ -10,9 +10,9 @@
     <Button
         android:layout_width="61dp"
         android:layout_height="38dp"
-        android:layout_marginStart="264dp"
-        android:layout_marginLeft="264dp"
-        android:layout_marginTop="172dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="204dp"
         android:background="#17A0A3A0"
         android:onClick="found"
         android:text="@string/next"
@@ -21,25 +21,26 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="404dp"
-        android:layout_height="503dp"
-        android:layout_marginBottom="64dp"
+        android:layout_width="409dp"
+        android:layout_height="335dp"
+        android:layout_marginBottom="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/waldo1" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/waldo6" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textView6"
         android:layout_width="144dp"
         android:layout_height="28dp"
-        android:layout_marginTop="24dp"
-        android:text="Level 1: Incomplete"
+        android:text="Level 6: Incomplete"
         android:textColor="@color/heading"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"/>
 
     <GridLayout
         android:layout_width="wrap_content"
@@ -51,6 +52,7 @@
         android:layout_marginBottom="6dp"
         android:columnCount="3"
         android:rowCount="1"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
