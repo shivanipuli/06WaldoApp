@@ -27,7 +27,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/waldo3" />
+        app:srcCompat="@drawable/waldo2" />
 
     <TextView
         android:id="@+id/textView"

@@ -4,31 +4,36 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    int[] layouts={};
-    int count=1;
+    int[] layouts={R.layout.waldo1,R.layout.waldo2};//,R.layout.waldo3,R.layout.waldo4,R.layout.waldo5};
+    int count=0;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
+    int[] header={R.id.textView1,R.id.textView2};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         editor = sharedPreferences.edit();
-        for(int x=0; x<layouts.length;x++)
-            editor.putString(x+"","Level " + x + ": Incomplete");
     }
     public void next(View view){
         editor.putString(count+"","Level " + count + ": Completed");
-        setContentView(layouts[count]);
+        editor.apply();
         count++;
         if(count>=layouts.length){
             count=0;
         }
-
+        setContentView(layouts[count]);
+        TextView head=findViewById(header[count]);
+        head.setText(sharedPreferences.getString(count+"","Incomplete"));
         Log.i("next", "count=" + count);
     }
     public void home(View view){

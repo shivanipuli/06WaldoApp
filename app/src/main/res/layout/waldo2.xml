@@ -30,7 +30,7 @@
         app:srcCompat="@drawable/waldo2" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView2"
         android:layout_width="218dp"
         android:layout_height="34dp"
         android:layout_marginStart="115dp"
@@ -44,6 +44,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="169dp"
+        android:layout_marginRight="169dp"
+        android:layout_marginBottom="38dp"
+        android:onClick="home"
+        android:text="HOME"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
