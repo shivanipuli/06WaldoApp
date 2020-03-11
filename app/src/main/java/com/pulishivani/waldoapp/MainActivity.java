@@ -11,11 +11,11 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    int[] layouts={R.layout.waldo1,R.layout.waldo2};//,R.layout.waldo3,R.layout.waldo4,R.layout.waldo5};
+    int[] layouts={R.layout.waldo1,R.layout.waldo2,R.layout.waldo3,R.layout.waldo4,R.layout.waldo5};
     int count=0;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
-    int[] header={R.id.textView1,R.id.textView2};
+    int[] header={R.id.textView1,R.id.textView2,R.id.textView3,R.id.textView4,R.id.textView5};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,10 +23,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         editor = sharedPreferences.edit();
+        for(int x=0;x<header.length;x++){
+            editor.putString(x+"","Level " + x + ": Incomplete");
+            editor.apply();
+        }
     }
     public void next(View view){
         editor.putString(count+"","Level " + count + ": Completed");
         editor.apply();
+        count++;
+        if(count>=layouts.length){
+            count=0;
+        }
+        setContentView(layouts[count]);
+        TextView head=findViewById(header[count]);
+        head.setText(sharedPreferences.getString(count+"","Incomplete"));
+        Log.i("next", "count=" + count);
+    }
+    public void nextt(View view){
         count++;
         if(count>=layouts.length){
             count=0;
