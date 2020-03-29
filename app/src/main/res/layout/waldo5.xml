@@ -8,11 +8,11 @@
     tools:context=".MainActivity">
 
     <Button
-        android:layout_width="61dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="164dp"
-        android:layout_marginLeft="164dp"
-        android:layout_marginTop="260dp"
+        android:layout_width="65dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="304dp"
+        android:layout_marginLeft="304dp"
+        android:layout_marginTop="240dp"
         android:background="#17A0A3A0"
         android:onClick="found"
         android:text="@string/next"
@@ -21,8 +21,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="409dp"
-        android:layout_height="335dp"
+        android:layout_width="374dp"
+        android:layout_height="461dp"
         android:layout_marginBottom="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

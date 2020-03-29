@@ -8,10 +8,10 @@
     tools:context=".MainActivity">
 
     <Button
-        android:layout_width="61dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="232dp"
-        android:layout_marginLeft="232dp"
+        android:layout_width="70dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="324dp"
+        android:layout_marginLeft="324dp"
         android:layout_marginTop="268dp"
         android:background="#17A0A3A0"
         android:onClick="found"
@@ -21,13 +21,15 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="454dp"
-        android:layout_height="302dp"
+        android:layout_width="446dp"
+        android:layout_height="481dp"
         android:layout_marginBottom="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.537"
         app:srcCompat="@drawable/waldo2" />
 
     <TextView
